@@ -5,6 +5,8 @@
 - In this project, we will take a photo and determine all digit and simple operators in this photo.
 - Our model will predict the digits and operators, then return a result of this calculation.
 
+
+
 ## Our team
 #### Nguyen Hong Hai - nguyen.honghai.hv@gmail.com
 #### Nguyen Dang Thanh Nguyen - ndtnguyen130@gmail.com
@@ -21,44 +23,24 @@
 
 ## Model
 ![](https://i.imgur.com/kMfw73z.png)
-- We have decided to use MobileNet_V2.
+- We have decided to use CNN.
 - But during training process, we speacially have concentrated on ImageGenerator steps. For data digit we just use **Rescale, rotation_range**
 - We should not use any flips here because it does not make sense for digit, moreover, it can make your result goes wrong. Ex: 2 and 5
-- Final accuracy: 60%
+- Final accuracy: 99%
 
-![](https://i.imgur.com/r6ayxOV.png)
-### {'+': 0, '-': 1, '0': 2, '1': 3, '2': 4, '3': 5, '4': 6, '5': 7, '6': 8, '7': 9, '8': 10, '9': 11, 'div': 12, 'times': 13}
+![](https://i.imgur.com/VgBNoty.png)
+### ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'addition', 'division', 'multiplication', 'subtraction']
 ```python
 def convert_math(math_detect):
     for i in range(0, len(math_detect)):
-        if math_detect[i] == 0:
+        if math_detect[i] == 'addition':
             math_detect[i] = '+'
-        elif math_detect[i] == 1:
-            math_detect[i] = '-'
-        elif math_detect[i] == 2:
-            math_detect[i] = '0'
-        elif math_detect[i] == 3:
-            math_detect[i] = '1'
-        elif math_detect[i] == 4:
-            math_detect[i] = '2'
-        elif math_detect[i] == 5:
-            math_detect[i] = '3'
-        elif math_detect[i] == 6:
-            math_detect[i] = '4'
-        elif math_detect[i] == 7:
-            math_detect[i] = '5'
-        elif math_detect[i] == 8:
-            math_detect[i] = '6'
-        elif math_detect[i] == 9:
-            math_detect[i] = '7'
-        elif math_detect[i] == 10:
-            math_detect[i] = '8'
-        elif math_detect[i] == 11:
-            math_detect[i] = '9'
-        elif math_detect[i] == 12:
+        elif math_detect[i] == 'division':
             math_detect[i] = '/'
-        elif math_detect[i] == 13:
+        elif math_detect[i] == 'multiplication':
             math_detect[i] = '*'
+        elif math_detect[i] == 'subtraction':
+            math_detect[i] = '-'
     return math_detect
 ```
 ## Calculate
