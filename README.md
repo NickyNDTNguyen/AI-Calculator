@@ -50,9 +50,7 @@ def calculate_string(math_detect):
     calculator = ''.join(str(item) for item in math_detect)
     print(calculator + ' = ' + str(eval(calculator)))
 ```
-```
-3*6 = 18
-```
+
 
 ## DEMO
 ...
