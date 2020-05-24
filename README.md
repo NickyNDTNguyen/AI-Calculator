@@ -1,5 +1,4 @@
-# week_8
-## AI Calculator
+# AI Calculator
 ![](https://i.imgur.com/esKBcPn.png)
 
 - In this project, we will take a photo and determine all digit and simple operators in this photo.
@@ -7,10 +6,8 @@
 
 
 
-## Our team
-#### Nguyen Hong Hai - nguyen.honghai.hv@gmail.com
+## Contact
 #### Nguyen Dang Thanh Nguyen - ndtnguyen130@gmail.com
-#### Nguyen Hanh Tu - tu.hanh.nguyen@outlook.com
 
 
 
